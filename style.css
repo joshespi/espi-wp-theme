@@ -47,6 +47,12 @@ Utility Classes
 .comment-form-comment {
   padding: 0 1em 0 0;
 }
+.gallery-item {
+  display: inline-block;
+  max-height: 42px;
+  width: 100%;
+  overflow: hidden;
+}
 /* =======================================================================================
 Heading Styles
 ======================================================================================= */
