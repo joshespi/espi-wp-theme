@@ -19,7 +19,9 @@ if (have_posts()) :
             the_title('<h2><a href="' . get_permalink() . '">', '</a></h2>');
         }
         if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
+            echo '<div>';
             the_post_thumbnail();  // display the featured image.
+            echo '</div>';
         }  // end Featured Image
         if (is_singular()) {
             the_content();
