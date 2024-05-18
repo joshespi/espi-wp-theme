@@ -7,8 +7,8 @@ add_theme_support('menus');
 function espitheme_assets()
 {
     // Enqueue style file
-    wp_enqueue_style('reset-css', get_template_directory_uri() . '/assets/css/reset.css', array(), '2.0.0', 'all');
-    wp_enqueue_style('style-name', get_stylesheet_uri());
+    wp_enqueue_style('pure-css', 'https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css', array(), '3.0.0', 'all');
+    wp_enqueue_style('theme-css', get_stylesheet_uri());
 }
 
 add_action('wp_enqueue_scripts', 'espitheme_assets', 10);
