@@ -3,7 +3,7 @@
 
 <?php
 if (is_singular()) {
-    the_title('<h1><a href="' . get_permalink() . '">', '</a></h1>');
+    the_title('<h1>', '</h1>');
 } else {
     echo "<h1>Blog</h1>";
 }
