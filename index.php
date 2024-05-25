@@ -12,7 +12,11 @@ if (is_singular()) {
 <?php
 // Start “The Loop”
 if (have_posts()) :
-
+    if (is_singular()) {
+        echo '<section class="single">';
+    } else {
+        echo '<section class="multi">';
+    }
     while (have_posts()) : the_post();
         echo '<article>';
         if (is_front_page()) {
@@ -33,6 +37,7 @@ if (have_posts()) :
         }
         echo '</article>';
     endwhile;
+    echo '</section>';
     // Pagination
     $args = array(
         'prev_text' => __('« Previous'),
