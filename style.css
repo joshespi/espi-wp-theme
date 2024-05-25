@@ -63,6 +63,45 @@ Utility Classes
   width: 100%;
   overflow: hidden;
 }
+.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+.wp-caption {
+  margin: 1em 0;
+}
+.wp-caption-text {
+  font-size: 0.8em;
+  text-align: center;
+}
+.sticky {
+  background-color: var(--accent-color);
+  padding: 1em;
+}
+.gallery-caption {
+  font-size: 0.8em;
+  text-align: center;
+}
+.bypostauthor {
+  border: 1px solid var(--accent-color);
+  padding: 1em;
+}
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 /* =======================================================================================
 Heading Styles
 ======================================================================================= */
