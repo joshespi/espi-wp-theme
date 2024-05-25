@@ -40,13 +40,13 @@ if (have_posts()) :
     echo '</section>';
     // Pagination
     $args = array(
-        'prev_text' => __('« Previous'),
-        'next_text' => __('Next »'),
+        'prev_text' => __('« Previous', 'espi-theme'),
+        'next_text' => __('Next »', 'espi-theme'),
     );
     echo paginate_links($args);
 
 else :
-    _e('Sorry, no  posts matched your criteria.', 'textdomain');
+    _e('Sorry, no  posts matched your criteria.', 'espi-theme');
 endif;
 // End of “The Loop”
 ?>

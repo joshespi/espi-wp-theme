@@ -19,8 +19,8 @@ add_action('wp_enqueue_scripts', 'espitheme_assets', 10);
 function espitheme_menus()
 {
     register_nav_menus(array(
-        'main-menu' => __('Main Menu'),
-        'footer-menu' => __('Footer Menu')
+        'main-menu' => __('Main Menu', 'espi-theme'),
+        'footer-menu' => __('Footer Menu', 'espi-theme')
     ));
 }
 
