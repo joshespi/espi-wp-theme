@@ -1,7 +1,6 @@
-</footer>
+</main>
 <footer>
     <nav>
-
         <?php
         $menu_name = 'footer-menu';
         $menu_items = wp_get_nav_menu_items($menu_name);
