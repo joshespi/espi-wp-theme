@@ -8,6 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <header>
         <div id="siteTitle">
             <a href="<?php echo esc_url(home_url()) ?>"><?php bloginfo('name'); ?></a>
