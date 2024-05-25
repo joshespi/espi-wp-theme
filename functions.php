@@ -1,4 +1,5 @@
 <?php
+$theme_version = wp_get_theme()->get('Version');
 //add theme supports
 add_theme_support("post-thumbnails");
 add_theme_support("title-tag");
@@ -15,7 +16,7 @@ function espitheme_assets()
 {
     // Enqueue style file
     wp_enqueue_style('pure-css', 'https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css', array(), '3.0.0', 'all');
-    wp_enqueue_style('theme-css', get_stylesheet_uri());
+    wp_enqueue_style('theme-css', get_stylesheet_uri(), array(), $theme_version, 'all');
 }
 
 add_action('wp_enqueue_scripts', 'espitheme_assets', 10);
