@@ -35,6 +35,10 @@ if (have_posts()) :
         } else {
             the_excerpt();
         }
+        wp_link_pages(array(
+            'before' => '<div class="post-links">' . __('Posts:', 'espi-theme'),
+            'after'  => '</div>',
+        ));
         echo '</article>';
     endwhile;
     echo '</section>';
