@@ -18,7 +18,9 @@ if (have_posts()) :
         echo '<section class="multi">';
     }
     while (have_posts()) : the_post();
-        echo '<article>';
+        echo '<article id="post-' . get_the_ID() . '" ';
+        post_class();
+        echo '>';
         if (is_front_page()) {
             the_title('<h2><a href="' . get_permalink() . '">', '</a></h2>');
         }
