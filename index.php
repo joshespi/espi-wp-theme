@@ -23,7 +23,7 @@ if (have_posts()) :
             the_title('<h2><a href="' . get_permalink() . '">', '</a></h2>');
         }
         if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
-            echo '<div>';
+            echo '<div class="featured">';
             the_post_thumbnail();  // display the featured image.
             echo '</div>';
         }  // end Featured Image
@@ -36,7 +36,7 @@ if (have_posts()) :
             the_excerpt();
         }
         wp_link_pages(array(
-            'before' => '<div class="post-links">' . __('Posts:', 'espi-theme'),
+            'before' => '<div class="post-links">' . __('Linked Posts:', 'espi-theme'),
             'after'  => '</div>',
         ));
         echo '</article>';
