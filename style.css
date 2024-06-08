@@ -4,7 +4,7 @@ Theme URI: https://github.com/joshespi/espi-wp-theme
 Author: Josh Espinoza
 Author URI: http://IamJoshEspinoza.com
 Description: Simple Theme Built from the ground up to be used for a simple Family Blog
-Version: 1.0.01
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: espi-theme
@@ -42,8 +42,6 @@ body {
 main {
   border-top: 4px solid var(--accent-color);
   border-bottom: 4px solid var(--accent-color);
-  margin: 0 auto;
-  padding: 1em;
 }
 textarea {
   width: 100%;
@@ -88,7 +86,6 @@ Utility Classes
 }
 .sticky {
   background-color: var(--accent-color);
-  padding: 1em;
 }
 .gallery-caption {
   font-size: 0.8em;
@@ -161,6 +158,13 @@ nav ul li {
 /* =======================================================================================
 Responsive
 ======================================================================================= */
+
+@media (min-width: 500px) {
+  main {
+    margin: 0 auto;
+    padding: 1em;
+  }
+}
 @media (min-width: 768px) {
   body {
     padding: 0 2em;
@@ -174,13 +178,24 @@ Responsive
   /* ===============================
   Blog Styles
   ================================== */
-
   .multi article {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5em;
+    /* gap: 5em; */
+    column-gap: 5em;
     padding: 1em;
     margin: 1em 0;
+  }
+  .multi article .featured {
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .multi article .featured img {
+    margin-bottom: 0;
   }
   .multi article:has(.featured) {
     grid-template-columns: repeat(2, 1fr);
@@ -188,11 +203,6 @@ Responsive
   .multi article h2,
   .multi article .post-links {
     grid-column: span 2;
-  }
-  .multi article .featured img {
-    border: 5px solid var(--accent-color);
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -209,7 +219,7 @@ Responsive
 }
 @media (min-width: 1700px) {
   body {
-    padding: 0 6em;
+    padding: 0 8em;
   }
   /* ===============================
   Blog Styles
@@ -217,9 +227,9 @@ Responsive
   .multi {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 5em;
-    padding: 1em;
-    margin: 1em 0; */
+  }
+  .multi article .featured {
+    height: 250px;
   }
   .multi article h2,
   .multi article .post-links {
