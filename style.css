@@ -48,6 +48,11 @@ main {
 textarea {
   width: 100%;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
 /* =======================================================================================
 Utility Classes
 ======================================================================================= */
@@ -59,7 +64,6 @@ Utility Classes
 }
 .gallery-item {
   display: inline-block;
-  max-height: 42px;
   width: 100%;
   overflow: hidden;
 }
