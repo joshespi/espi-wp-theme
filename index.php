@@ -24,7 +24,7 @@ if (have_posts()) :
         }
         if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
             echo '<div class="featured">';
-            the_post_thumbnail();  // display the featured image.
+            the_post_thumbnail('large');  // display the featured image.
             echo '</div>';
         }  // end Featured Image
         if ($is_singular) {
