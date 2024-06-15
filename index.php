@@ -22,7 +22,8 @@ if (have_posts()) :
         if ($is_front_page) {
             the_title('<h2><a href="' . get_permalink() . '">', '</a></h2>');
         }
-        if (has_post_thumbnail()) { // check if the post has a Post Thumbnail assigned to it.
+        //TODO: make option to show/hide featured image for single posts
+        if (has_post_thumbnail() && $is_singular == false) { // check if the post has a Post Thumbnail assigned to it.
             echo '<div class="featured">';
             the_post_thumbnail('large');  // display the featured image.
             echo '</div>';
